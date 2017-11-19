@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240D860C1FBFE9BE00CB41B2 /* addTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D860B1FBFE9BE00CB41B2 /* addTaskViewController.swift */; };
+		240F936F1FBE94E8000E3428 /* task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F936E1FBE94E8000E3428 /* task.swift */; };
 		24141DE91FBE8D8300B67EEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24141DE81FBE8D8300B67EEA /* AppDelegate.swift */; };
-		24141DEB1FBE8D8300B67EEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24141DEA1FBE8D8300B67EEA /* ViewController.swift */; };
+		24141DEB1FBE8D8300B67EEA /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24141DEA1FBE8D8300B67EEA /* TaskViewController.swift */; };
 		24141DEE1FBE8D8300B67EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24141DEC1FBE8D8300B67EEA /* Main.storyboard */; };
 		24141DF11FBE8D8300B67EEA /* doit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24141DEF1FBE8D8300B67EEA /* doit.xcdatamodeld */; };
 		24141DF31FBE8D8300B67EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24141DF21FBE8D8300B67EEA /* Assets.xcassets */; };
@@ -16,9 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240D860B1FBFE9BE00CB41B2 /* addTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTaskViewController.swift; sourceTree = "<group>"; };
+		240F936E1FBE94E8000E3428 /* task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task.swift; sourceTree = "<group>"; };
 		24141DE51FBE8D8300B67EEA /* doit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24141DE81FBE8D8300B67EEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24141DEA1FBE8D8300B67EEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		24141DEA1FBE8D8300B67EEA /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		24141DED1FBE8D8300B67EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24141DF01FBE8D8300B67EEA /* doit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = doit.xcdatamodel; sourceTree = "<group>"; };
 		24141DF21FBE8D8300B67EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 		24141DDC1FBE8D8300B67EEA = {
 			isa = PBXGroup;
 			children = (
+				240F936E1FBE94E8000E3428 /* task.swift */,
 				24141DE71FBE8D8300B67EEA /* doit */,
 				24141DE61FBE8D8300B67EEA /* Products */,
 			);
@@ -57,8 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				24141DE81FBE8D8300B67EEA /* AppDelegate.swift */,
-				24141DEA1FBE8D8300B67EEA /* ViewController.swift */,
+				24141DEA1FBE8D8300B67EEA /* TaskViewController.swift */,
 				24141DEC1FBE8D8300B67EEA /* Main.storyboard */,
+				240D860B1FBFE9BE00CB41B2 /* addTaskViewController.swift */,
 				24141DF21FBE8D8300B67EEA /* Assets.xcassets */,
 				24141DF41FBE8D8300B67EEA /* LaunchScreen.storyboard */,
 				24141DF71FBE8D8300B67EEA /* Info.plist */,
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240D860C1FBFE9BE00CB41B2 /* addTaskViewController.swift in Sources */,
+				240F936F1FBE94E8000E3428 /* task.swift in Sources */,
 				24141DF11FBE8D8300B67EEA /* doit.xcdatamodeld in Sources */,
-				24141DEB1FBE8D8300B67EEA /* ViewController.swift in Sources */,
+				24141DEB1FBE8D8300B67EEA /* TaskViewController.swift in Sources */,
 				24141DE91FBE8D8300B67EEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +287,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = default;
 				DEVELOPMENT_TEAM = FT82G7L9Q8;
 				INFOPLIST_FILE = doit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -294,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_ACTIVITY_MODE = "";
 				DEVELOPMENT_TEAM = FT82G7L9Q8;
 				INFOPLIST_FILE = doit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
