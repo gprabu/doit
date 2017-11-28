@@ -9,6 +9,9 @@
 import UIKit
 
 class TaskViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+   
+    var tasks :  [Task] = [];
+    var selectedTask = 0;
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count;
@@ -18,20 +21,23 @@ class TaskViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         let cell = UITableViewCell();
         let task = tasks[indexPath.row]
         if (task.imp == true) {
-            cell.textLabel?.text = "❗️"+task.name;
-
+            cell.textLabel?.text = "❗️ \(task.name)";
         } else {
             cell.textLabel?.text = task.name;
-
         }
         return cell;
         
         
     }
 
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedTask = indexPath.row
+        let task = tasks[selectedTask]
+        performSegue(withIdentifier: "showCompleteTask", sender: task)
+    }
     @IBOutlet weak var doit: UITableView!
-    var tasks :  [Task] = [];
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,8 +60,16 @@ class TaskViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextVC  = segue.destination as! addTaskViewController;
-        nextVC.prevVC = self
+        
+        if (segue.identifier == "addSegue") {
+            let nextVC  = segue.destination as! addTaskViewController;
+            nextVC.prevVC = self
+        }
+        else if (segue.identifier == "showCompleteTask" ){
+            let nextVC = segue.destination as! CompleteTaskViewController;
+            nextVC.task = sender as! Task;
+            nextVC.prevVC = self;
+        }
     }
     
     func makeTasks() -> [Task] {

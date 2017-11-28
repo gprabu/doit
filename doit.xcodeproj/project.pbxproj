@@ -15,6 +15,7 @@
 		24141DF11FBE8D8300B67EEA /* doit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24141DEF1FBE8D8300B67EEA /* doit.xcdatamodeld */; };
 		24141DF31FBE8D8300B67EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24141DF21FBE8D8300B67EEA /* Assets.xcassets */; };
 		24141DF61FBE8D8300B67EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24141DF41FBE8D8300B67EEA /* LaunchScreen.storyboard */; };
+		24149F931FCCED3300C0F30D /* completeTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24149F921FCCED3300C0F30D /* completeTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		24141DF21FBE8D8300B67EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24141DF51FBE8D8300B67EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24141DF71FBE8D8300B67EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24149F921FCCED3300C0F30D /* completeTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				24141DE81FBE8D8300B67EEA /* AppDelegate.swift */,
 				24141DEA1FBE8D8300B67EEA /* TaskViewController.swift */,
+				24149F921FCCED3300C0F30D /* completeTaskViewController.swift */,
 				24141DEC1FBE8D8300B67EEA /* Main.storyboard */,
 				240D860B1FBFE9BE00CB41B2 /* addTaskViewController.swift */,
 				24141DF21FBE8D8300B67EEA /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 			files = (
 				240D860C1FBFE9BE00CB41B2 /* addTaskViewController.swift in Sources */,
 				240F936F1FBE94E8000E3428 /* task.swift in Sources */,
+				24149F931FCCED3300C0F30D /* completeTaskViewController.swift in Sources */,
 				24141DF11FBE8D8300B67EEA /* doit.xcdatamodeld in Sources */,
 				24141DEB1FBE8D8300B67EEA /* TaskViewController.swift in Sources */,
 				24141DE91FBE8D8300B67EEA /* AppDelegate.swift in Sources */,
