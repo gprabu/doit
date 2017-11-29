@@ -17,11 +17,15 @@ class TaskViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         return tasks.count;
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getTask()
+        doit.reloadData()
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell();
         let task = tasks[indexPath.row]
         if (task.imp == true) {
-            cell.textLabel?.text = "❗️ \(task.name)";
+            cell.textLabel?.text = "❗️ \(task.name!)";
         } else {
             cell.textLabel?.text = task.name;
         }
@@ -37,13 +41,26 @@ class TaskViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     @IBOutlet weak var doit: UITableView!
    
-    
+    func getTask(){
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
+        //Create the task from the form
+        
+        do {
+            tasks = try context.fetch(Task.fetchRequest()) as! [Task]
+            print(tasks)
+        }
+        catch
+        {
+            print("Error!!! Task Exception")
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        tasks = makeTasks();
+        //tasks = makeTasks();
         
         doit.delegate = self
         doit.dataSource = self;
@@ -71,7 +88,7 @@ class TaskViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             nextVC.prevVC = self;
         }
     }
-    
+    /*
     func makeTasks() -> [Task] {
         let task1 = Task()
         task1.name = "Get Egg"
@@ -89,5 +106,6 @@ class TaskViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         return return_tasks;
     
     }
+     */
 }
 

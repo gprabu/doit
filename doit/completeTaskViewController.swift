@@ -14,26 +14,41 @@ class CompleteTaskViewController: UIViewController {
     var task = Task()
     var prevVC = TaskViewController()
     
+    @IBOutlet weak var imp: UISwitch!
     @IBOutlet weak var labelText: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         labelText.text = task.name
+        imp.isOn = task.imp
         // Do any additional setup after loading the view.
     }
     
     
+    @IBAction func toggleImp(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
+        //Create the task from the form
+        task.imp = imp.isOn
+
+        context.processPendingChanges()
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func deleteTasks(_ sender: Any) {
-        print(prevVC.selectedTask)
-        prevVC.tasks.remove(at: prevVC.selectedTask)
         
-        prevVC.doit.reloadData()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
+        //Create the task from the form
+        
+        context.delete(task)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+
+
         navigationController?.popViewController(animated: true)
     }
     

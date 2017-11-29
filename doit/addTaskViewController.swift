@@ -28,14 +28,18 @@ class addTaskViewController: UIViewController {
     }
     
     @IBAction func addtask(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
         //Create the task from the form
         
-        let task = Task()
-        task.name = taskName.text!
+        let task = Task(context: context)
+        
+        task.name = taskName.text!;
         task.imp = importantornot.isOn
         
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
         //Now add it to the task from other vi
-
+        
         prevVC.tasks.append(task)
         prevVC.doit.reloadData()
         navigationController?.popViewController(animated: true)

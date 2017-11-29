@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		240D860C1FBFE9BE00CB41B2 /* addTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D860B1FBFE9BE00CB41B2 /* addTaskViewController.swift */; };
-		240F936F1FBE94E8000E3428 /* task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F936E1FBE94E8000E3428 /* task.swift */; };
 		24141DE91FBE8D8300B67EEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24141DE81FBE8D8300B67EEA /* AppDelegate.swift */; };
 		24141DEB1FBE8D8300B67EEA /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24141DEA1FBE8D8300B67EEA /* TaskViewController.swift */; };
 		24141DEE1FBE8D8300B67EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24141DEC1FBE8D8300B67EEA /* Main.storyboard */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		240D860B1FBFE9BE00CB41B2 /* addTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTaskViewController.swift; sourceTree = "<group>"; };
-		240F936E1FBE94E8000E3428 /* task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task.swift; sourceTree = "<group>"; };
 		24141DE51FBE8D8300B67EEA /* doit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24141DE81FBE8D8300B67EEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24141DEA1FBE8D8300B67EEA /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +44,6 @@
 		24141DDC1FBE8D8300B67EEA = {
 			isa = PBXGroup;
 			children = (
-				240F936E1FBE94E8000E3428 /* task.swift */,
 				24141DE71FBE8D8300B67EEA /* doit */,
 				24141DE61FBE8D8300B67EEA /* Products */,
 			);
@@ -149,7 +146,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				240D860C1FBFE9BE00CB41B2 /* addTaskViewController.swift in Sources */,
-				240F936F1FBE94E8000E3428 /* task.swift in Sources */,
 				24149F931FCCED3300C0F30D /* completeTaskViewController.swift in Sources */,
 				24141DF11FBE8D8300B67EEA /* doit.xcdatamodeld in Sources */,
 				24141DEB1FBE8D8300B67EEA /* TaskViewController.swift in Sources */,
